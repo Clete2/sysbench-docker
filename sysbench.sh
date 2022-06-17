@@ -36,7 +36,6 @@ sysbench $COMMON_OPTS \
   --memory-total-size=1TB \
   --memory-oper=read \
   --memory-access-mode=rnd \
-  --report-interval=5 \
   memory \
   run
 
