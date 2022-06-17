@@ -49,6 +49,8 @@ sysbench $COMMON_OPTS \
   memory \
   run
 
+sysbench fileio prepare
+
 sleep
 echo "Running file sequential write test"
 sysbench $COMMON_OPTS \
@@ -96,3 +98,5 @@ echo "Running mutex test"
 sysbench $COMMON_OPTS \
   mutex \
   run
+
+sysbench fileio cleanup
