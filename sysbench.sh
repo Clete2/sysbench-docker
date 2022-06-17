@@ -93,10 +93,11 @@ sysbench $COMMON_OPTS \
   fileio \
   run
 
+sysbench fileio cleanup
+
 sleep
 echo "Running mutex test"
 sysbench $COMMON_OPTS \
   mutex \
   run
 
-sysbench fileio cleanup
