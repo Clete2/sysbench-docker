@@ -50,49 +50,57 @@ sysbench $COMMON_OPTS \
   run
 
 sysbench fileio prepare
-
 sleep
 echo "Running file sequential write test"
 sysbench $COMMON_OPTS \
   --file-test-mode=seqwr \
   fileio \
   run
+sysbench fileio cleanup
 
+sysbench fileio prepare
 sleep
 echo "Running file sequential read test"
 sysbench $COMMON_OPTS \
   --file-test-mode=seqrd \
   fileio \
   run
+sysbench fileio cleanup
 
+sysbench fileio prepare
 sleep
 echo "Running file sequential rewrite test"
 sysbench $COMMON_OPTS \
   --file-test-mode=seqrewr \
   fileio \
   run
+sysbench fileio cleanup
 
+sysbench fileio prepare
 sleep
 echo "Running file random write test"
 sysbench $COMMON_OPTS \
   --file-test-mode=rndwr \
   fileio \
   run
+sysbench fileio cleanup
 
+sysbench fileio prepare
 sleep
 echo "Running file random read test"
 sysbench $COMMON_OPTS \
   --file-test-mode=rndrd \
   fileio \
   run
+sysbench fileio cleanup
 
+sysbench fileio prepare
 sleep
 echo "Running file random rewrite test"
 sysbench $COMMON_OPTS \
   --file-test-mode=rndrw \
   fileio \
   run
-
 sysbench fileio cleanup
 
 sleep
